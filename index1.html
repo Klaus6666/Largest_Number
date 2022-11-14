@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function largestnum()
+        {
+            var num1, num2, num3;
+            num1 = prompt("Enter 1 no"); 
+            num2 = prompt("Enter 2 no"); 
+            num3 = prompt("Enter 3 no"); 
+
+            if(num1>num2 && num1>num3)
+            {
+                window.alert(num1 +" is greatest");
+                document.getElementById("largest").innerHTML = num1;
+            }
+            else if(num2>num1 && num2>num3)
+            {
+                window.alert(num2+" is greatst");
+                document.getElementById("largest").innerHTML = num2;
+            }
+            else if(num3>num1 && num3>num1)
+            {
+                window.alert(num3+" is greatest");
+                document.getElementById("largest").innerHTML = num3;
+            }
+        document.getElementById("num1").innerHTML = num1;
+        document.getElementById("num2").innerHTML = num2;
+        document.getElementById("num3").innerHTML = num3;
+        }
+        
+    </script>
+    <style>
+        body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: table;
+}
+
+#activity {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#activity:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 20vh;
+    background: rgba(0,173,239,0.5);
+}
+#activity:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 20vh;
+    background: rgba(235,0,138, 0.5);
+}
+
+#result {
+    text-transform: uppercase;
+}
+
+.tryagain {
+background-attachment: scroll;
+background-clip: border-box;
+background-color: rgb(127, 206, 119);
+background-image: none;
+background-origin: padding-box;
+background-size: auto;
+border-bottom-left-radius: 16px;
+border-bottom-right-radius: 16px;
+border-top-left-radius: 16px;
+border-top-right-radius: 16px;
+box-sizing: border-box;
+color: rgb(255, 255, 255);
+cursor: pointer;
+display: inline-block;
+font-family: 'Open Sans', sans-serif;
+font-size: 32px;
+font-stretch: normal;
+font-style: normal;
+font-variant: normal;
+font-weight: normal;
+height: 93px;
+line-height: normal;
+margin-bottom: 8px;
+margin-left: 9.28px;
+margin-right: 9.28px;
+margin-top: 8px;
+min-height: 0px;
+min-width: 208px;
+outline-width: 0px;
+padding-bottom: 24px;
+padding-left: 24px;
+padding-right: 24px;
+padding-top: 24px;
+position: relative;
+text-align: center;
+text-transform: none;
+transition-delay: 0s;
+transition-duration: 0.28s;
+transition-property: box-shadow;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+width: 351.594px;
+z-index: 0;
+}
+
+a:link, a:hover, a:visited, a:active {
+    text-decoration: none;
+}
+#container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    width: 95px;
+    height: 95px;
+    font-size: 20px;
+    background: #3F51B5;
+    color: #fff;
+    text-align: center;
+    box-shadow: 0px 2px 5px #666;
+    border-radius: 3px;
+    display: inherit;
+    justify-content: inherit;
+    align-items: inherit;
+    transition: all 0.5s ease;
+    /* margin-left: 20px;
+    margin-right: 20px; */
+    margin: 20px;
+    
+}
+.box:hover{
+    box-shadow: 0px 5px 20px #333;
+    cursor: pointer;
+    transform: scale(1.5);
+  }
+    </style>
+</head>
+<body>
+    <div id="activity">
+        <h1>Largest Number Among Three Numbers</h1>
+    <br>
+    <div id="container">
+        <div class="box" id="num1">
+          --
+        </div>
+        <div class="box" id="num2">
+            --
+        </div>
+        <div class="box" id="num3">
+            --
+        </div>
+    </div>
+    <div id="container">
+        <div class="box" id="largest">
+            --
+        </div>
+    </div>
+        <a class="tryagain" onclick="largestnum()">RESTART</a>
+    </div>
+</body>
+</html>
